@@ -1,0 +1,19 @@
+<div class="container p-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1>Lost Kitty</h1>
+      <%= link_to 'Add', new_pet_path %>
+      <ul>
+        <% @pets.each do |pet| %>
+          <li>
+            <h2><%= pet.category %></h2>
+            <h3><%= pet.description %></h3>
+            <%= link_to 'view', pet_path(pet) %>
+          </li>
+        <% end %>
+      </ul>
+
+    </div>
+  </div>
+</div>
+

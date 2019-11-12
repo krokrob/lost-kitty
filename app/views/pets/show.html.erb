@@ -1,0 +1,7 @@
+<h1><%= @pet.description %></h1>
+
+<p>Category: <%= @pet.category %></p>
+<p>Found on: <%= @pet.date.strftime("%A %-d %B %Y") %></p>
+<p>Found: <%= @pet.address %></p>
+<%= link_to 'edit', edit_pet_path(@pet) %>
+<%= link_to 'remove from lost Kitty', pet_path(@pet), method: :delete %>
